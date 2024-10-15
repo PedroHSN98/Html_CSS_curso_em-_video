@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{ /*  <- Esta se referindo ao a href: / ( Tudo nele ira ser mudado) */
+            color: red;
+            text-decoration: none; /* <- Ira tirar o sublinhado de todos os links */
+            font-weight: bold; /* <- Ira deixar a fonte em negrito */
+        }
+
+        a:visited{ /* Pseudo-classe <- Isso deixara o link como se tivesse sido acessado anteriormente, trocando a cor apos o acessado. */
+            color: darkred;
+        }
+
+        a:hover{ /* <- passa o mouse por cima etc. */
+            color: black;
+            text-decoration: underline; /* <- Quando deixar o mouse por cima do link, ele ira criar um sublinhado abaixo do link, como se fosse uma linha. */
+        }
+
+        a:active{ /* <- Deixar a cor dele ativo apos um clique do mouse no link ativo. */
+            color: yellow;
+        }
+                                                /* Pseudo-Classes uma vez ::after
+                                                Pseudo-Elementos duas vezes ::after */
+
+        
+        a::before{
+            content: '➡️';   
+        }
+
+         a::after{ /* <- Pseudo-Elemento, ele muda diretamente no conteudo, tanto nas class, nos elementos nos ids. */
+            content: '⬅️';  /* <- Significa conteudo */
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray;
+        }
+
+
+       /*   
+            Pseudo-Classes uma vez :
+	         Pseudo-Elementos duas vezes ::
+       */ 
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+         <li><a href="https:gustavoguanabara.github.io" target="_blank">Repositorio Github</a></li> <!--O target="_blank" ira fazer logo apos abrir o link vai abrir uma nova aba de navegação do link clicado em outro aba de navegador.-->
+
+        <li><a href="https:youtube.com/cursoemvideo/">Canal Do Youtube</a></li>
+
+         <li><a href="https:www.cursoemvideo.com">Site do Cursoemvideo</a></li>
+    </ul>
+</body>
+</html>
